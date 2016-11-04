@@ -1,5 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
+import TreeView from './components/TreeView';
+import Demo from './components/Demo';
 import Hello from './components/Hello';
 
 if (module.hot) {
@@ -7,6 +9,9 @@ if (module.hot) {
 }
 
 render(
-  <Hello />,
+  <div>
+    <TreeView></TreeView>
+    <Demo></Demo>
+  </div>,
   document.getElementById('demo')
 );
