@@ -1,0 +1,8 @@
+@prefix demo;
+
+.box {
+  flex: 1 1 100%;
+  background: #fafafa;
+}
+
+@prefix;

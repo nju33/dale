@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const APP_DIR = 'app';
 
 module.exports = {
-  make(cwd, demoContents, outputPath) {
+  make(cwd, {demoContents, srcContents}, outputPath) {
     return {
       devtool: '#eval-source-map',
       context: path.join(__dirname, '..'),
@@ -35,7 +35,8 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
-          demoContents
+          demoContents: JSON.stringify(demoContents),
+          srcContents: JSON.stringify(srcContents)
         })
       ],
 
@@ -49,7 +50,7 @@ module.exports = {
               {
                 loader: 'babel',
                 query: {
-                  presets:  ['es2015', 'react'],
+                  presets:  ['es2015', 'react', 'stage-1'],
                   plugins:[
                     'react-hot-loader/babel',
                     'transform-object-rest-spread',

@@ -13,7 +13,8 @@ module.exports = {
       server: {
         baseDir: path.join(__dirname, '../app/'),
         routes: {
-          '/scripts': path.join(jsDir)
+          '/scripts': path.join(jsDir),
+          '/demo': path.join(process.cwd(), 'app')
         },
         middleware: [
           webpackDevMiddleware(compiler, {
@@ -24,8 +25,10 @@ module.exports = {
         ]
       },
       files: [
-        path.join(cwd, 'app/styles/**/*.css'),
-        path.join(cwd, 'app/*.html')
+        path.resolve(__dirname, '../app/styles/*.css'),
+        path.resolve(__dirname, '../app/*.html'),
+        // path.join(cwd, 'app/styles/**/*.css'),
+        // path.join(cwd, 'app/*.html')
       ]
     });
     return server;

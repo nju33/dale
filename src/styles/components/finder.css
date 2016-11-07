@@ -1,0 +1,12 @@
+@prefix finder;
+
+.list {
+  overflow: auto;
+  background: #222;
+}
+
+.item {
+  padding: .2em .5em;
+}
+
+@prefix;

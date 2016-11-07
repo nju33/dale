@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@import "../../bower_components/normalize-css/normalize.css";
+
+@import "defaults.css";
+@import "root.css";
+@import "components/code.css";
+@import "components/finder.css";
+@import "components/demo.css";
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  background: #333;
+  color: #f8f8f8;
+}

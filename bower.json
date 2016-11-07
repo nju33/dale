@@ -1,0 +1,21 @@
+{
+  "name": "dp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "nju33 <nju33.ki@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/totora0155/dp",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}

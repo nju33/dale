@@ -5,11 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title></title>
+  <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
 
   <div id="demo"></div>
   <script src="/scripts/index.js"></script>
+
+  <script>
+    !function() {
+      var _getElementById = document.getElementById;
+      var _getElementsByClassName = document.getElementsByClassNam;
+      var _getElementsByTagName = document.getElementsByTagName;
+
+      document.getElementById = function (id) {
+        return _getElementById.call(document, 'shadowDOMParent')
+          .children[0].shadowRoot.getElementById(id);
+      }
+
+      document.getElementsByClassName = function(className) {
+        return _getElementById.call(document, 'shadowDOMParent')
+          .children[0].shadowRoot.getElementsByClassName(id);
+      }
+
+      document.getElementsByTagName = function(tagName) {
+        return _getElementById.call(document, 'shadowDOMParent')
+          .children[0].shadowRoot.getElementsByTagName(id);
+      }
+    }();
+  </script>
+  <script src="/demo/scripts/index.js"></script>
 
 </body>
 </html>
